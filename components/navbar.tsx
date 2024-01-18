@@ -4,6 +4,7 @@ import MainNav from "@/components/main-nav";
 import Container from "@/components/ui/container";
 import NavbarActions from "@/components/navbar-actions";
 import getCategories from "@/actions/get-categories";
+import { ThemeToggle } from "./theme-toggle";
 
 export const revalidate = 0;
 
@@ -18,7 +19,10 @@ const Navbar = async () => {
             <p className="font-bold text-xl">STORE</p>
           </Link>
           <MainNav data={categories} />
-          <NavbarActions />
+          <div className="ml-auto flex items-center space-x-4">
+            <ThemeToggle />
+            <NavbarActions />
+          </div>
         </div>
       </Container>
     </div>
